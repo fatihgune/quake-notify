@@ -18,7 +18,7 @@ class EarthquakeRepository
 
     private $minMagnitude = 5;
 
-    public function init(): ?string
+    public function init()
     {
         $tableFirst20RowsArray = $this->getTableStringAndStoreEachRowInArrayAndReturnFirst20();
         $matchKey = $this->checkIfNewRecordsExistAndReturnCountOfThem($tableFirst20RowsArray);
