@@ -17,7 +17,7 @@ class EarthquakeRepository
 {
     use UtilityTrait;
 
-    private $minMagnitude = 4.5;
+    private $minMagnitude = 2;
 
     public function init()
     {
