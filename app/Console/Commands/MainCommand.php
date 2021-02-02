@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Repositories\EarthquakeRepository;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 
 class MainCommand extends Command
 {
@@ -15,5 +16,6 @@ class MainCommand extends Command
     {
         $repo = app()->make(EarthquakeRepository::class);
         $repo->init();
+        Log::info('schedule ran');
     }
 }

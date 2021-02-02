@@ -7,6 +7,7 @@ use App\Traits\UtilityTrait;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Log;
 use Str;
 use Twilio\Exceptions\ConfigurationException;
 use Twilio\Exceptions\TwilioException;
@@ -140,6 +141,7 @@ class EarthquakeRepository
                         "from" => $from,
                         "body" => $this->prepareAndReturnMessageString($new)
                     ]);
+                    Log::info('sms sent');
                 }
             }
         }
