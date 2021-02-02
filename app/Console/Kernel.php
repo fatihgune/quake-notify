@@ -26,7 +26,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-         $schedule->command('quake:check')->everyFiveMinutes();
+         $schedule->command('quake:check')->everyMinute();
     }
 
     /**
