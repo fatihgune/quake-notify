@@ -13,8 +13,8 @@ class CreateLastTwentyRecordsTable extends Migration
             $table->text('time');
             $table->char('lat', 7);
             $table->char('long', 7);
-            $table->char('magnitude', 2);
-            $table->char('place', 2);
+            $table->char('magnitude', 3);
+            $table->char('place', 255);
             $table->timestamps();
         });
     }
