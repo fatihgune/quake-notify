@@ -137,7 +137,7 @@ class EarthquakeRepository
                     $from = config('services.twilio.whatsapp_from');
 
                     $twilio = new TwilioClient(config('services.twilio.sid'), config('services.twilio.token'));
-                    $twilio->messages->create($phone->phone_number, [
+                    $twilio->messages->create($phone, [
                         "from" => $from,
                         "body" => $this->prepareAndReturnMessageString($new)
                     ]);
